@@ -1,2 +1,9 @@
 <h1>International Students Association</h1>
 <h3>Site Under Development</h3>
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= post.title %></li>
+  <% end %>
+</ul>
+
+  
