@@ -2,6 +2,8 @@ IsaSite::Application.routes.draw do
   resources :posts
 
   devise_for :admins
+  
+  match '/admins/panel' => 'home#admin_panel'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
