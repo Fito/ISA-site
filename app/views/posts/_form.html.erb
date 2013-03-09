@@ -23,6 +23,11 @@
     <%= f.label :publication_date %><br />
     <%= f.datetime_select :publication_date %>
   </div>
+  <div class>
+    <%= label_tag :attachment_url %>
+    <%= text_field_tag :attachment_url %>
+    <button class='add_attachment_field'>Add another attachment</button>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
