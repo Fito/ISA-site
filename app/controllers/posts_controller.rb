@@ -41,11 +41,16 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(params[:post].merge({:publication_date => Time.now}))
     @post.admin_id = current_admin.id
+    @attachments = Attachment.new_from_urls(params[:attachments])
 
     respond_to do |format|
       if @post.save
+        @attachments.each do |a|
+           a.post_id = @post.id
+           a.save
+        end
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else

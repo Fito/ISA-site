@@ -6,6 +6,11 @@
     <li>
       <h4><%= post.title %></h4>
       <p><%= post.content %></p>
+      <div class='attachments'>
+        <% post.attachments.each do |attachment| %>
+          <%= image_tag attachment.url %>
+        <% end %>
+      </div>
     </li>
   <% end %>
 </ul>
