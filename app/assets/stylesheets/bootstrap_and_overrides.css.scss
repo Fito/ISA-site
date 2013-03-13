@@ -1,7 +1,14 @@
 @import "bootstrap";
 
 body { 
-	padding: 10px;
+	width: 100%;
+}
+
+#wrapper {
+	width: 90%;
+	max-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
 }
 
 @import "bootstrap-responsive";

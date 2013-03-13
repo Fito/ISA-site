@@ -4,6 +4,8 @@ IsaSite::Application.routes.draw do
   devise_for :admins
   
   match '/admins/panel' => 'home#admin_panel'
+  match 'admins/panel/new_admin' => 'home#new_admin', :as => 'panel_new_admin'
+  match 'admins/panel/create_admin' => 'home#create_admin', :as => 'panel_create_admin'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

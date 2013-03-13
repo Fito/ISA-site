@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<h2>Sign up a new admin</h2>
+
+<%= form_tag(panel_create_admin_path, :method => 'post') do %>
+  <%= fields_for :admin do |admin| %>
+    <div class='field'><%= admin.label :email %><br />
+    <%= admin.email_field :email %></div>
+
+    <div class='field'><%= admin.label :password %><br />
+    <%= admin.password_field :password %></div>
+
+    <div class='field'><%= admin.label :password_confirmation %><br />
+    <%= admin.password_field :password_confirmation %></div>
+  <% end %>
+  
+  <div><%= submit_tag "Create account" %></div>
+<% end %>

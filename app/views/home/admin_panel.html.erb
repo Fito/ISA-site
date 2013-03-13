@@ -1,5 +1,6 @@
+<p id="notice"><%= notice %></p>
 <h3><%= current_admin.name %>'s panel:</h3>
 <%= button_to 'Create a new Post', new_post_url, {:method => 'get', :class => 'btn'} %></br>
 <%= button_to 'Edit posts', posts_url, {:method => 'get', :class => 'btn'} %></br>
-<%= button_to 'Create another admin account', new_registration_path(@admin), 
+<%= button_to 'Create another admin account', panel_new_admin_path, 
               {:method => 'get', :class => 'btn'} %>
