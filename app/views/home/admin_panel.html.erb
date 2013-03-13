@@ -1,4 +1,4 @@
-<h3>Hello <%= current_admin.email %></h3>
+<h3><%= current_admin.name %>'s panel:</h3>
 <%= button_to 'Create a new Post', new_post_url, {:method => 'get', :class => 'btn'} %></br>
 <%= button_to 'Edit posts', posts_url, {:method => 'get', :class => 'btn'} %></br>
 <%= button_to 'Create another admin account', new_registration_path(@admin), 
