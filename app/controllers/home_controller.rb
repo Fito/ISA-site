@@ -5,5 +5,6 @@ class HomeController < ApplicationController
   end
   
   def admin_panel
+    @admin = Admin.new
   end
 end
