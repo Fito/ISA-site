@@ -1,23 +1,13 @@
-#header {
-	width: 100%;
-	overflow: hidden;
-	padding: 5px 0px;
-}
-
-#header .admin-btn {
-	float: right;
-}
-
-#header h2 {
-	float: left;
-}
-
 #admins-panel {
 	width: 100%;
 	max-width: 800px;
 	overflow: hidden;
 	margin: 20px auto;
 	text-align: center;
+	background-color: #FFE;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #444;
 }
 
 #panel-actions {
@@ -30,10 +20,37 @@
 	width: 230px;
 }
 
-.attachments-container img {
-	width: 30%;
-	max-width: 300px;
-	max-height: 200px;
+.attachments-container {
+	width: 100%;
 	overflow: hidden;
 }
 
+.attachments-container img {
+	margin: 10px;
+	width: 40%;
+	max-width: 300px;
+	max-height: 200px;
+	box-shadow: 3px 3px 10px #444;
+}
+
+.post {
+	width: 95%;
+	overflow: hidden;
+	margin: 10px auto;
+	background-color: #FFE;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 10px #444;
+}
+
+.post h4 {
+	font-size: 26px;
+	text-align: center;
+}
+
+.post p {
+	font-size: 16px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding: 0 15px;
+}

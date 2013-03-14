@@ -1,10 +1,11 @@
 <div id='admins-panel'>
   <p id="notice"><%= notice %></p>
-  <h3><%= current_admin.name %>'s panel:</h3>
+  <h2><%= current_admin.name %>'s panel:</h2>
   <div id='panel-actions'>
     <%= button_to 'Create a new Post', new_post_url, {:method => 'get', :class => 'btn btn-large'} %></br>
     <%= button_to 'Edit posts', posts_url, {:method => 'get', :class => 'btn btn-large'} %></br>
     <%= button_to 'Create another admin account', panel_new_admin_path, 
                   {:method => 'get', :class => 'btn btn-large'} %>
+    <%= link_to 'Back to home', root_path %>
   </div>
 </div>

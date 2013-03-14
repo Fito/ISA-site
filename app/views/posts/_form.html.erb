@@ -20,25 +20,27 @@
       <%= f.label :content %><br />
       <%= f.text_area :content %>
     </div>
-    <div class='attachment-urls'>
-      <%= fields_for :attachments do |a| %>
-        <div class="field">
-          <%= a.label :attachment1_url, 'Attachment' %>
-          <%= a.text_field :attachment1_url %>
-        </div>
-        <div class="field">
-          <%= a.label :attachment2_url, 'Attachment' %>
-          <%= a.text_field :attachment2_url %>
-        </div>
-        <div class="field">
-          <%= a.label :attachment3_url, 'Attachment' %>
-          <%= a.text_field :attachment3_url %>
-        </div>
-      <% end %>
-    </div>
-    <div class='button-container'>
-      <%= button_tag 'Add another attachment', {:class => 'add-attachment btn'} %>
-    </div>
+    <% if current_page?(new_post_path) %>
+      <div class='attachment-urls'>
+        <%= fields_for :attachments do |a| %>
+          <div class="field">
+            <%= a.label :attachment1_url, 'Attachment' %>
+            <%= a.text_field :attachment1_url %>
+          </div>
+          <div class="field">
+            <%= a.label :attachment2_url, 'Attachment' %>
+            <%= a.text_field :attachment2_url %>
+          </div>
+          <div class="field">
+            <%= a.label :attachment3_url, 'Attachment' %>
+            <%= a.text_field :attachment3_url %>
+          </div>
+        <% end %>
+      </div>
+      <div class='button-container'>
+        <%= button_tag 'Add another attachment', {:class => 'add-attachment btn'} %>
+      </div>
+    <% end %>
     <div class="actions">
       <%= f.submit :class => 'btn'%>
     </div>

@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id='header'>
+    <h2>International Students Association</h1>
+    <%= button_to 'Admin Panel', '/admins/panel', {:method => 'get', :class => 'admin-btn btn'}%>
+  </div>
   <div id='wrapper'>
     <%= yield %>
   </div>

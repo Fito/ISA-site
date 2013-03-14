@@ -2,18 +2,45 @@
 
 body { 
 	width: 100%;
+	background-color: #89F;
 }
 
 #wrapper {
-	width: 90%;
-	max-width: 1200px;
+	width: 80%;
+	max-width: 1100px;
 	overflow: hidden;
 	margin: 0 auto;
-	padding-top: 15px;
+	padding: 15px;
 }
 
-#wrapper h1 {
+#wrapper h1.home-title {
+	padding: 10px;
+	background-color: #FFE;
+	border-radius: 8px;
+	box-shadow: 3px 3px 10px #444;
+	font-size: 35px;
+}
+
+#wrapper h1, h3 {
 	text-align: center;
 }
 
-@import "bootstrap-responsive";
+#header {
+	width: 100%;
+	overflow: hidden;
+	height: 50px;
+	padding: 5px 0px;
+	background-color: #669084;
+	color: #FFF
+}
+
+#header .admin-btn {
+	float: right;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+
+#header h2 {
+	float: left;
+	padding-left: 15px;
+}
