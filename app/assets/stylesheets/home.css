@@ -1,5 +1,39 @@
-#controls {
+#header {
 	width: 100%;
 	overflow: hidden;
 	padding: 5px 0px;
 }
+
+#header .admin-btn {
+	float: right;
+}
+
+#header h2 {
+	float: left;
+}
+
+#admins-panel {
+	width: 100%;
+	max-width: 800px;
+	overflow: hidden;
+	margin: 20px auto;
+	text-align: center;
+}
+
+#panel-actions {
+	width: 100%;
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+#panel-actions input {
+	width: 230px;
+}
+
+.attachments-container img {
+	width: 30%;
+	max-width: 300px;
+	max-height: 200px;
+	overflow: hidden;
+}
+

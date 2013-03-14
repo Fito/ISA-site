@@ -9,6 +9,11 @@ body {
 	max-width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
+	padding-top: 15px;
+}
+
+#wrapper h1 {
+	text-align: center;
 }
 
 @import "bootstrap-responsive";

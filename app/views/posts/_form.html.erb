@@ -1,42 +1,46 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class='post-form'>
+  <%= form_for(@post) do |f| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content %>
+    </div>
+    <div class='attachment-urls'>
+      <%= fields_for :attachments do |a| %>
+        <div class="field">
+          <%= a.label :attachment1_url, 'Attachment' %>
+          <%= a.text_field :attachment1_url %>
+        </div>
+        <div class="field">
+          <%= a.label :attachment2_url, 'Attachment' %>
+          <%= a.text_field :attachment2_url %>
+        </div>
+        <div class="field">
+          <%= a.label :attachment3_url, 'Attachment' %>
+          <%= a.text_field :attachment3_url %>
+        </div>
       <% end %>
-      </ul>
+    </div>
+    <div class='button-container'>
+      <%= button_tag 'Add another attachment', {:class => 'add-attachment btn'} %>
+    </div>
+    <div class="actions">
+      <%= f.submit :class => 'btn'%>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-  <%= fields_for :attachments do |a| %>
-    <div class="field">
-      <%= a.label :attachment1_url, 'Attachment' %>
-      <%= a.text_field :attachment1_url %>
-    </div>
-    <div class="field">
-      <%= a.label :attachment2_url, 'Attachment' %>
-      <%= a.text_field :attachment2_url %>
-    </div>
-    <div class="field">
-      <%= a.label :attachment3_url, 'Attachment' %>
-      <%= a.text_field :attachment3_url %>
-    </div>
-  <% end %>
-  <div class='button-container'>
-    <%= button_tag 'Add another attachment', {:class => 'add-attachment'} %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

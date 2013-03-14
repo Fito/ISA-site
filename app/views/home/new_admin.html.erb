@@ -13,5 +13,6 @@
     <%= admin.password_field :password_confirmation %></div>
   <% end %>
   
-  <div><%= submit_tag "Create account" %></div>
+  <div><%= submit_tag "Create account", {:class => 'btn'} %></div>
 <% end %>
+<div><%= button_to "Back to panel", admins_panel_path, :method => 'get', :class => 'btn' %></div>

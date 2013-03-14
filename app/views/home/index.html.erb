@@ -1,12 +1,14 @@
-<div id='controls'><%= button_to 'Admin Panel', '/admins/panel', {:method => 'get', :class => 'btn'}%></div>
-<h2>International Students Association</h1>
+<div id='header'>
+  <h2>International Students Association</h1>
+  <%= button_to 'Admin Panel', '/admins/panel', {:method => 'get', :class => 'admin-btn btn'}%>
+</div>
 <h3>Site Under Development</h3>
 <ul>
   <% @posts.each do |post| %>
     <li>
       <h4><%= post.title %></h4>
       <p><%= post.content %></p>
-      <div class='attachments'>
+      <div class='attachments-container'>
         <% post.attachments.each do |attachment| %>
           <%= image_tag attachment.url %>
         <% end %>
