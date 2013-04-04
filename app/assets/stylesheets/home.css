@@ -1,13 +1,13 @@
-#admins-panel {
+#admins-panel, .sign-in-form, .index-table-container, .new-resource, .show-post {
 	width: 100%;
 	max-width: 800px;
 	overflow: hidden;
 	margin: 20px auto;
 	text-align: center;
-	background-color: #FFE;
+	background-color: #FFF;
 	padding: 15px;
 	border-radius: 10px;
-	box-shadow: 3px 3px 10px #444;
+	box-shadow: 3px 3px 6px #555;
 }
 
 #panel-actions {
@@ -30,27 +30,13 @@
 	width: 40%;
 	max-width: 300px;
 	max-height: 200px;
-	box-shadow: 3px 3px 10px #444;
+	box-shadow: 3px 3px 10px #555;
 }
 
-.post {
-	width: 95%;
-	overflow: hidden;
-	margin: 10px auto;
-	background-color: #FFE;
-	padding: 15px;
-	border-radius: 10px;
-	box-shadow: 3px 3px 10px #444;
+.remember-me {
+	margin: 10px 0px 15px 0px;
 }
 
-.post h4 {
-	font-size: 26px;
-	text-align: center;
-}
-
-.post p {
-	font-size: 16px;
-	margin-top: 15px;
-	margin-bottom: 20px;
-	padding: 0 15px;
+.remember-me label {
+	display: inline;
 }

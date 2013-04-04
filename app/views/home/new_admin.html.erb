@@ -3,6 +3,9 @@
 
 <%= form_tag(panel_create_admin_path, :method => 'post') do %>
   <%= fields_for :admin do |admin| %>
+    <div class='field'><%= admin.label :name %><br />
+    <%= admin.text_field :name %></div>    
+  
     <div class='field'><%= admin.label :email %><br />
     <%= admin.email_field :email %></div>
 

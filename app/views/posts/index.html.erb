@@ -1,27 +1,31 @@
-<h1>Listing posts</h1>
+<div class='index-table-container'>
+  <h1>Listing posts</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Publication date</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Publication date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= post.publication_date %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <% @posts.each do |post| %>
+    <tr>
+      <td class='title'><%= post.title %></td>
+      <td class='content'><%= post.content %></td>
+      <td class='pub_date'><%= l post.publication_date, :format => :short %></td>
+      <td>
+        <%= button_to 'Edit', edit_post_path(post), :method => 'get', :class => 'btn' %>
+        <%= button_to 'Delete', post, method: 'delete', 
+                      data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
 
-<br />
+  <br />
 
-<%= link_to 'New Post', new_post_path %>
+  <%= button_to 'New Post', new_post_path, :method => 'get', :class => 'btn btn-large' %>
+</div>

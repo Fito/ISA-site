@@ -1,14 +1,4 @@
-<h1 class='home-title'>ISA News!</h1>
-<% @posts.each do |post| %>
-  <div class='post'>
-    <h4><%= post.title %></h4>
-    <p><%= post.content %></p>
-    <div class='attachments-container'>
-      <% post.attachments.each do |attachment| %>
-        <%= image_tag attachment.url %>
-      <% end %>
-    </div>
-  </div>
-<% end %>
-
+<div id="home-content-container">
+  <%= render :template => 'home/news' %>
+</div>
   

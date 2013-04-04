@@ -1,0 +1,33 @@
+<div class='index-table-container'>
+  <h1>Listing members</h1>
+
+  <table>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Picture url</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @members.each do |member| %>
+    <tr>
+      <td class='first-name'><%= member.first_name %></td>
+      <td class='last-name'><%= member.last_name %></td>
+      <td class='picture'><%= member.picture_url %></td>
+      <td class='email'><%= member.email %></td>
+      <td>
+        <%= button_to 'Edit', edit_member_path(member), :method => 'get', :class => 'btn' %>
+        <%= button_to 'Delete', member, method: 'delete', 
+                      data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+  
+  <%= button_to 'New Member', new_member_path, :method => 'get', :class => 'btn btn-large' %>
+</div>

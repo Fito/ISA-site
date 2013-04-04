@@ -8,8 +8,16 @@
 </head>
 <body>
   <div id='header'>
-    <h2>International Students Association</h1>
+    <a href='/' class='title-link'><h2>International Students Association</h2></a>
     <%= button_to 'Admin Panel', '/admins/panel', {:method => 'get', :class => 'admin-btn btn'}%>
+    <div class='header-menu'>
+      <ul>
+        <li class='selected'>News</li>
+        <li class='unselected'>Members</li>
+        <li class='unselected'>Info</li>
+        <li class='unselected'>Pictures</li>
+      </ul>
+    </div>
   </div>
   <div id='wrapper'>
     <%= yield %>

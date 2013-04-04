@@ -1,4 +1,6 @@
 IsaSite::Application.routes.draw do
+  resources :members
+
   resources :posts
 
   devise_for :admins

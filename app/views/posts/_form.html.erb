@@ -1,4 +1,4 @@
-<div class='post-form'>
+<div class='resource-form'>
   <%= form_for(@post) do |f| %>
     <% if @post.errors.any? %>
       <div id="error_explanation">
@@ -42,7 +42,7 @@
       </div>
     <% end %>
     <div class="actions">
-      <%= f.submit :class => 'btn'%>
+      <%= f.submit :class => 'create-post btn btn-large btn-success'%>
     </div>
   <% end %>
 </div>

@@ -2,22 +2,23 @@
 
 body { 
 	width: 100%;
-	background-color: #89F;
+	background-color: #7D8EF4;
 }
 
 #wrapper {
 	width: 80%;
-	max-width: 1100px;
+	max-width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
-	padding: 15px;
+	padding: 25px 15px;
 }
 
 #wrapper h1.home-title {
+	color: #484848;
 	padding: 10px;
-	background-color: #FFE;
+	background-color: #FFF;
 	border-radius: 8px;
-	box-shadow: 3px 3px 10px #444;
+	box-shadow: 3px 3px 6px #555;
 	font-size: 35px;
 }
 
@@ -28,19 +29,54 @@ body {
 #header {
 	width: 100%;
 	overflow: hidden;
-	height: 50px;
-	padding: 5px 0px;
-	background-color: #669084;
-	color: #FFF
+	padding-top: 5px;
+	background-color: #DDD;
+	background-image: url('world_map.png');
+	background-size: 200px;
+	background-repeat: repeat-x;
+	color: #555
+}
+
+#header .title-link:link, .title-link:visited, .title-link:hover, .title-link:active {
+	text-decoration:none;
+	color: #555;
 }
 
 #header .admin-btn {
 	float: right;
-	margin-right: 15px;
-	margin-top: 5px;
+	margin: 10px 15px 10px 0px;
 }
 
 #header h2 {
 	float: left;
 	padding-left: 15px;
+}
+
+#header .header-menu {
+	width: 100%;
+	overflow: hidden;
+}
+
+#header .header-menu  ul {
+	width: 90%;
+	overflow: hidden;
+	margin: 0 auto;
+	list-style-type: none;
+}
+
+#header .header-menu  ul li {
+	width: 24.5%;
+	height: 25px;
+	display: inline-block;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 15px 0px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#header .header-menu  ul li.selected {
+	background-color: #7D8EF4;
+	border-radius: 8px 8px 0px 0px;
+	color: #FFF;
 }

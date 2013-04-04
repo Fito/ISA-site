@@ -5,7 +5,9 @@
     <%= button_to 'Create a new Post', new_post_url, {:method => 'get', :class => 'btn btn-large'} %></br>
     <%= button_to 'Edit posts', posts_url, {:method => 'get', :class => 'btn btn-large'} %></br>
     <%= button_to 'Create another admin account', panel_new_admin_path, 
-                  {:method => 'get', :class => 'btn btn-large'} %>
+                  {:method => 'get', :class => 'btn btn-large'} %></br>
+    <%= button_to 'Log out', destroy_admin_session_path, :method => 'delete', 
+                  :class => 'btn btn-large' %>
     <%= link_to 'Back to home', root_path %>
   </div>
 </div>

@@ -24,4 +24,8 @@ class HomeController < ApplicationController
       end
     end
   end
+  
+  def news
+    @posts = Post.all
+  end
 end
