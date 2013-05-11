@@ -8,15 +8,7 @@
 </head>
 <body>
   <div id='header'>
-    <a href='/' class='title-link'><h2>International Students Association</h2></a>
-    <div class='header-menu'>
-      <ul>
-        <li class='selected'>News</li>
-        <li class='unselected'>Members</li>
-        <li class='unselected'>Info</li>
-        <li class='unselected'>Pictures</li>
-      </ul>
-    </div>
+    <a href='/' class='title-link'><%= image_tag("logo.png", {:class => 'logo'}) %></a>
   </div>
   <div id='wrapper'>
     <%= yield %>

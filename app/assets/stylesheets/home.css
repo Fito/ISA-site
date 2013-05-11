@@ -4,12 +4,19 @@
 	overflow: hidden;
 	margin: 20px auto;
 	text-align: center;
-	background-color: #FFF;
 	padding: 15px;
 	border-radius: 10px;
 	box-shadow: 3px 3px 6px #555;
 }
 
+.title-link {
+  display: block;
+  width: 300px;
+}
+
+a.title-link:hover, a.attachment:hover {
+  background: none;
+}
 #panel-actions {
 	width: 100%;
 	overflow: hidden;
